@@ -1,8 +1,8 @@
 import React from 'react'
-import { Switch, Route } from 'react-router-dom'
-import ListOfUsers from './components/ListOfUsers'
-import NewModel from './components/NewModel'
-import UserDetail from './components/UserDetail'
+// import { Switch, Route } from 'react-router-dom'
+// import ListOfUsers from './components/ListOfUsers'
+// import NewModel from './components/NewModel'
+// import UserDetail from './components/UserDetail'
 
 const Router = () => {
     return (

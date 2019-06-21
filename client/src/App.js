@@ -6,9 +6,9 @@ import NewModel from "./components/NewModel";
 // import Router from './router'
 
 class App extends Component {
-  constructor() {
-    super();
-  }
+  // constructor() {
+  //   super();
+  // }
   componentDidMount() {
 
   }

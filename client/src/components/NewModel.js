@@ -5,20 +5,20 @@ export default class NewModel extends Component {
         super(props)
     
         this.state = {
-            name: 'Zoe'
+            needyButton: 'Touch Me, Plz'
         }
     }
     
 
     handleClick = (e) => {
-        console.log(e.target.value, this.state.name)
+        console.log(e.target.value, this.state.needyButton)
     }
     render() {
         return (
             <div>
                 <form>
                     <button onClick={this.handleClick}>
-                        {this.state.name}
+                        {this.state.needyButton}
                         {/* for each modal, this will be mapped and rendered so */}
                     </button>
                 </form>
