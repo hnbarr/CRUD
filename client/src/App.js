@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
+import ListOfUsers from "./components/ListOfUsers";
 
 class App extends Component {
   constructor() {
@@ -11,6 +12,7 @@ class App extends Component {
     return (
       <div>
         Client
+        <ListOfUsers />
       </div>
     );
   }
