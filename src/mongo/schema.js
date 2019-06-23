@@ -4,9 +4,9 @@ const Schema = mongoose.Schema
 const Auth = new Schema({
   userName: String,
   password: String,
-  bandName: String,
-  genre: String,
-  leadSinger: String
+  firstName: String,
+  lastName: String,
+  city: String
 })
 
 module.exports = { Auth }

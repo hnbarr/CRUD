@@ -1,0 +1,42 @@
+
+.card{
+    margin: 0 auto;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 50vw;
+    justify-content: center;
+    border: 1px solid orangered;
+    border-radius: 12px;
+    box-shadow: 0 10px 6px -6px rgb(188, 188, 188);
+  }
+
+ #registerBtn {
+     width: 10vw;
+     border-radius: 8px;
+     border: 1px solid orangered;
+     background-color: transparent;
+     outline: none;
+     padding: 5px;
+     margin: 5px;
+ }
+
+ #registerBtn:hover {
+     background-color: orangered;
+     color: white;
+ }
+
+ .field {
+     padding: 5px;
+     border: none;
+     border-bottom: 1px solid grey;
+ }
+
+ label {
+     padding: 5px;
+ }
+
+ h3 {
+     text-align: center;
+ }

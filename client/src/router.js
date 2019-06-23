@@ -1,7 +1,7 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import ListOfUsers from './components/ListOfUsers'
-import NewModel from './components/NewModel'
+import SignUp from './components/SignUp'
 import UserDetail from './components/UserDetail'
 
 const Router = () => {
@@ -9,8 +9,8 @@ const Router = () => {
         <Switch>
             <Route exact path='/'></Route>
             <Route path='/list' component={ListOfUsers}></Route>
-            <Route path='/new' component={NewModel}></Route>
-            <Route path='/detail' component={UserDetail}></Route>
+            <Route path='/register' component={SignUp}></Route>
+            <Route path='/:id' component={UserDetail}></Route>
         </Switch>
     );
 }
