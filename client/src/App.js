@@ -1,29 +1,23 @@
 import React, { Component } from "react";
 import "./App.css";
-import ListOfUsers from "./components/ListOfUsers";
-import NewModel from "./components/NewModel";
-// import { BrowserRouter } from 'react-router-dom'
-// import Router from './router'
+// import ListOfUsers from "./components/ListOfUsers";
+// import NewModel from "./components/NewModel";
+import { BrowserRouter } from 'react-router-dom'
+import Router from './router'
 
 class App extends Component {
-  // constructor() {
-  //   super();
-  // }
+  constructor() {
+    super();
+  }
   componentDidMount() {
 
   }
   render() {
     return (
-      <div>
-      {/* <BrowserRouter> */}
-        Client
-        <ListOfUsers />
-        <NewModel />
-      {/* </BrowserRouter> */}
-      </div>
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
     );
   }
 }
 export default (App);
-
-
