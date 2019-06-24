@@ -5,10 +5,10 @@ function users (state = [], action) {
   switch (action.type) {
     case "LIST_USERS":
       return action.value;
-    case "CREATE_VEHICLE":
+    case "CREATE_USERS":
       newState.push(action.value);
       return newState;
-    case "DELETE_VEHICLE":
+    case "DELETE_USERS":
       const index = newState.findIndex(v => v._id === action.value);
       newState.splice(index, 1);
       return newState;

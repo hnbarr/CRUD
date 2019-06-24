@@ -1,12 +1,24 @@
-export const addUser = (user) => {
+
+  export function listUsers(users) {
+    console.log("list users", users);
     return {
-      type: "ADD_USER",
-      value: user
-    }
+      type: "LIST_USERS",
+      value: users
+    };
   }
   
-  export const removeUser = () => {
+  export function createUser(user) {
+    console.log("create user", users);
     return {
-      type: "REMOVE_USER"
-    }
+      type: "CREATE_USER",
+      value: user
+    };
+  }
+  
+  export function deleteUser(id) {
+    console.log("delete user", id);
+    return {
+      type: "DELETE_USER",
+      value: id
+    };
   }

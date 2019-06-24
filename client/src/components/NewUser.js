@@ -2,14 +2,16 @@ import React, { Component } from 'react'
 import './components.css'
 
 
-export default class SignUp extends Component {
+export default class NewUser extends Component {
     constructor(props) {
         super(props)
     
         this.state = {
             firstName: '',
             lastName: '',
-            location: ''
+            location: '',
+            userName: '',
+            id: 0
         }
     }
 
@@ -24,7 +26,7 @@ export default class SignUp extends Component {
     render() {
         return (
             <form className='card'>
-              <h3>add a new member!</h3>
+              <h3>add a new user!</h3>
                 <label>first name: </label>
                     <input className='field' type='text 'placeholder='Jane'></input>
                 
