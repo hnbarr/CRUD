@@ -6,7 +6,7 @@ const Auth = new Schema({
   password: String,
   firstName: String,
   lastName: String,
-  city: String
+  location: String 
 })
 
 module.exports = { Auth }

@@ -8,7 +8,7 @@ class App extends Component {
   //   super();
   // }
   componentDidMount() {
-
+    // loadThings()
   }
   render() {
     return (
