@@ -1,11 +1,12 @@
 import React from 'react'
 import './components.css'
 import PropTypes from 'prop-types';
-// import Link from 'react-router-dom'
-// import deleteUser from '../actions/index'
+import Link from 'react-router-dom'
+import deleteUser from '../actions/index'
 
 
 const ListOfUsers = (props) => {
+    // this.props.listUsers()
     console.log(props)
     return (
         <div className='card'>                
@@ -13,7 +14,7 @@ const ListOfUsers = (props) => {
             <ul>
                 {/* broke here! */}
                 {/* {props.users.map((user)=> {
-                    <div id='user.id'>
+                    <div id='user.firstName'>
                         {user.firstname}
                         <Link to='/detail'> details </Link>
                         <button onClick={deleteUser} type='submit'> delete </button>
@@ -24,9 +25,9 @@ const ListOfUsers = (props) => {
     )
 }
 
-ListOfUsers.propTypes = {
-    users: PropTypes.array
-  };
+// ListOfUsers.propTypes = {
+//     users: PropTypes.array
+//   };
 
 export default ListOfUsers;
 

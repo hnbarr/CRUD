@@ -9,7 +9,8 @@ class App extends Component {
   //   super();
   // }
   componentDidMount() {
-    this.props.listUsers()
+    // this.props.listUsers()
+    // ask Matt about this error, uncomment to see
   }
   render() {
     return (

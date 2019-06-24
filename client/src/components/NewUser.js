@@ -19,34 +19,35 @@ export default class NewUser extends Component {
 
     handleChange = (e) => {
         this.setState({
-            [e.target.id]: e.target.value
+            [e.target.name]: e.target.value
           });
     }
     
 
     handleClick = (e) => {
         console.log(e.target.value)
+        
     }
     render() {
         return (
-            <form className='card'>
+            <form className='card' onSubmit={this.handleClick}>
               <h3>add a new user!</h3>
                 <label>first name: </label>
-                    <input className='field' type='text 'placeholder='Jane'></input>
+                    <input className='field' onChange={this.handleChange} type='text' name='firstName' placeholder='Jane'></input>
                 
                 <label>last name: </label>
-                    <input className='field' type='text 'placeholder='Doe'></input>
+                    <input className='field' onChange={this.handleChange} type='text' name='lastName' placeholder='Doe'></input>
                 
                 <label>city: </label>
-                    <input className='field' type='text 'placeholder='Boston'></input>
+                    <input className='field' onChange={this.handleChange} type='text' name='city' placeholder='Boston'></input>
 
                 <label>state: </label>
-                    <input className='field' type='text 'placeholder='Massachusetts'></input>
+                    <input className='field' onChange={this.handleChange} type='text' name='state' placeholder='Massachusetts'></input>
 
                 <label>email: </label>
-                    <input className='field' type='text 'placeholder='janedoe@gmail.com'></input> 
+                    <input className='field' onChange={this.handleChange} type='text' name='email' placeholder='janedoe@gmail.com'></input> 
                 
-                <button id='registerBtn' onClick={this.handleClick}> submit </button>   
+                <button id='registerBtn' type='submit'> submit </button>   
             </form>
         )
     }
