@@ -8,7 +8,7 @@
   }
   
   export function createUser(user) {
-    console.log("create user", user);
+    // console.log("create user", user);
     return {
       type: "CREATE_USER",
       value: user
@@ -16,7 +16,7 @@
   }
   
   export function deleteUser(id) {
-    console.log("delete user", id);
+    // console.log("delete user", id);
     return {
       type: "DELETE_USER",
       value: id
