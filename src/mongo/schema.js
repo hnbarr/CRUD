@@ -1,12 +1,12 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const Auth = new Schema({
-  userName: String,
-  password: String,
+const User = new Schema({
   firstName: String,
   lastName: String,
-  location: String 
+  state: String,
+  city: String,
+  email: String,
 })
 
-module.exports = { Auth }
+module.exports = { User }

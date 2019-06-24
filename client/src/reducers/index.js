@@ -1,6 +1,6 @@
 import {combineReducers} from "redux";
 
-function users (state = [], action) {
+const users = (state = [], action) => {
   const newState = [...state];
   switch (action.type) {
     case "LIST_USERS":
@@ -9,7 +9,7 @@ function users (state = [], action) {
       newState.push(action.value);
       return newState;
     case "DELETE_USERS":
-      const index = newState.findIndex(v => v._id === action.value);
+      const index = newState.findIndex(u => u._id === action.value);
       newState.splice(index, 1);
       return newState;
     default:

@@ -8,7 +8,7 @@
   }
   
   export function createUser(user) {
-    console.log("create user", users);
+    console.log("create user", user);
     return {
       type: "CREATE_USER",
       value: user

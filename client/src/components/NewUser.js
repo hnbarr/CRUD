@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import './components.css'
+import PropTypes from 'prop-types'
+
 
 
 export default class NewUser extends Component {
@@ -9,14 +11,16 @@ export default class NewUser extends Component {
         this.state = {
             firstName: '',
             lastName: '',
-            location: '',
-            userName: '',
-            id: 0
+            city: '',
+            state: '',
+            email: ''
         }
     }
 
     handleChange = (e) => {
-        console.log(e.target.value)
+        this.setState({
+            [e.target.id]: e.target.value
+          });
     }
     
 
@@ -33,11 +37,23 @@ export default class NewUser extends Component {
                 <label>last name: </label>
                     <input className='field' type='text 'placeholder='Doe'></input>
                 
-                <label>location: </label>
-                    <input className='field' type='text 'placeholder='Boston'></input> 
+                <label>city: </label>
+                    <input className='field' type='text 'placeholder='Boston'></input>
+
+                <label>state: </label>
+                    <input className='field' type='text 'placeholder='Massachusetts'></input>
+
+                <label>email: </label>
+                    <input className='field' type='text 'placeholder='janedoe@gmail.com'></input> 
                 
-                <button id='registerBtn' onClick={this.handleClick}> click yo </button>   
+                <button id='registerBtn' onClick={this.handleClick}> submit </button>   
             </form>
         )
     }
 }
+
+
+NewUser.propTypes = {
+    users: PropTypes.array
+  };
+// I think someting is wrong with my prop types

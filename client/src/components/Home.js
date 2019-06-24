@@ -1,16 +1,16 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './components.css'
 import ListOfUsers from './ListOfUsers';
 import NewUser from './NewUser';
 
-export default class Home extends Component {
-    render() {
-        return (
-            <div>
-                <NewUser />
-                <ListOfUsers />
-            </div>
-        )
-    }
+const Home = () => {
+    return (
+        <div>
+            <NewUser />
+            <ListOfUsers />
+        </div>
+    )
 }
+
+export default Home;
 

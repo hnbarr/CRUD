@@ -4,7 +4,6 @@ import ListOfUsers from './components/ListOfUsers'
 import NewUser from './components/NewUser'
 import UserDetail from './components/UserDetail'
 import Home from './components/Home'
-import NotFound from './components/NotFound';
 
 const Router = () => {
     return (

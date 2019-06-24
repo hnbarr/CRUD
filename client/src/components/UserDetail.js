@@ -1,11 +1,13 @@
 import React from 'react'
 import './components.css'
+// import deleteUser from '../actions/index'
 
-const UserDetail = () => {
+const UserDetail = (props) => {
     return (
         <div className='card'>
-            <p>User Detail</p>
-            {/* need to do all steps in directions, no progress here tonight */}
+            broken so far... :/
+            {/* <p>{props.user.firstname}'s' Details</p>
+            <button onClick={deleteUser} type='submit'>delete</button> */}
         </div>
     )
 }

@@ -1,1 +1,22 @@
-import { connect } from 'react-redux';
+import ListOfUsers from "../components/ListOfUsers";
+import { connect } from "react-redux";
+import { listUsers } from '../actions'
+
+
+function mapStateToProps(state) {
+  return {
+    users: state.users
+  };
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+      listUsers: (users) => dispatch(listUsers(users))
+    }
+  }
+
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ListOfUsers);
