@@ -43,3 +43,15 @@
  h3 {
      text-align: center;
  }
+
+li {
+     list-style-type: none;
+ }
+
+ #userDetailCard {
+     border: 1px solid rgb(188, 188, 188);
+     padding: 5px;
+     border-radius: 12px;
+     margin: 10px;
+     width: 35vw;
+ }

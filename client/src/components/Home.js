@@ -1,13 +1,13 @@
 import React from 'react'
 import './components.css'
-import ListOfUsers from './ListOfUsers';
-import NewUser from './NewUser';
+import ListContainer from '../containers/ListContainer';
+import NewUserContainer from '../containers/NewUserContainer';
 
 const Home = () => {
     return (
         <div>
-            <NewUser />
-            <ListOfUsers />
+            <NewUserContainer />
+            <ListContainer />
         </div>
     )
 }

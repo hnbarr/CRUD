@@ -1,5 +1,4 @@
 import {combineReducers} from "redux";
-// import state from '../state'
 
 const users = (state = [], action) => {
   if(action.type === "LIST_USERS"){
@@ -7,6 +6,14 @@ const users = (state = [], action) => {
   } 
   return state;
 }
+
+const rootReducer = combineReducers({
+  users
+});
+export default rootReducer;
+
+
+
 
 // const users = (state = [], action) => {
 //   state = users
@@ -25,11 +32,3 @@ const users = (state = [], action) => {
 //       return state
 //   }
 // }
-
-
-const rootReducer = combineReducers({
-  users
-});
-export default rootReducer;
-
-

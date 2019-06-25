@@ -1,11 +1,11 @@
 import ListOfUsers from "../components/ListOfUsers";
 import { connect } from "react-redux";
-// import { listUsers, deleteUser } from '../actions'
+import { deleteUser } from '../actions'
 
 
-function mapStateToProps(props) {
+function mapStateToProps(state) {
     return {
-    users: props.users
+    users: state.users
   };
 }
 

@@ -1,7 +1,7 @@
 import App from "./App";
 import "./App.css";
 import { connect } from "react-redux";
-// import { listUsers } from './actions'
+import { listUsers } from './actions'
 
 function mapStateToProps(state) {
   return {
@@ -9,10 +9,10 @@ function mapStateToProps(state) {
   };
 }
 
-// function mapDispatchToProps(dispatch) {
-//   return {
-//     listUsers: (users) => dispatch(listUsers(users))
-//   };
-// }
+function mapDispatchToProps(dispatch) {
+  return {
+    listUsers: (users) => dispatch(listUsers(users))
+  };
+}
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);

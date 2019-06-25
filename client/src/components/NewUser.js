@@ -33,7 +33,7 @@ export default class NewUser extends Component {
         const state = this.state.state;
         const email = this.state.email;
 
-        this.props.createPost({ firstName, lastName, city, state, email })
+        this.props.createUser({ firstName, lastName, city, state, email })
         
     }
     render() {

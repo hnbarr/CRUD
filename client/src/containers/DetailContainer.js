@@ -2,14 +2,11 @@ import UserDetail from "../components/UserDetail";
 import { connect } from "react-redux";
 
 
-function mapStateToProps(store) {
+function mapStateToProps(state) {
   return {
-    users: store.users
+    users: state.users
   };
 }
 
 
-export default connect(
-  mapStateToProps,
-  null
-)(UserDetail);
+export default connect(mapStateToProps,null)(UserDetail);

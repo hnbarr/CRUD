@@ -1,17 +1,17 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
-import ListOfUsers from './components/ListOfUsers'
-import NewUser from './components/NewUser'
-import UserDetail from './components/UserDetail'
-import Home from './components/Home'
+import ListContainer from './containers/ListContainer';
+import NewUserContainer from './containers/NewUserContainer';
+import DetailContainer from './containers/DetailContainer';
+import HomeContainer from './containers/HomeContainer';
 
 const Router = () => {
     return (
         <Switch>
-            <Route exact path='/' component={Home}></Route>
-            <Route path='/list' component={ListOfUsers}></Route>
-            <Route path='/new' component={NewUser}></Route>
-            <Route path='/:id' component={UserDetail}></Route>
+            <Route exact path='/' component={HomeContainer}></Route>
+            <Route path='/list' component={ListContainer}></Route>
+            <Route path='/new' component={NewUserContainer}></Route>
+            <Route path='/:id' component={DetailContainer}></Route>
         </Switch>
     );
 }

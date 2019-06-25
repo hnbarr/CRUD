@@ -1,37 +1,28 @@
 import React from 'react'
 import './components.css'
-// import PropTypes from 'prop-types';
-// import Link from 'react-router-dom'
+import { Link } from 'react-router-dom'
 // import deleteUser from '../actions/index'
 
 
 const ListOfUsers = (props) => {
-    // this.props.listUsers()
-    console.log('ListOfUsers.js: props =', props) //returning an object
+    console.log('ListOfUsers.js: props =', props)
     return (
         <div className='card'>                
         <h4>Current Users:</h4>
             <ul>
-                {/* broke here! */}
-                {/* commented code goes here */}
+                {props.users.map((user)=> {
+                  return (
+                    <li key={user.id}>{user.firstName} <Link to='/:id'> details </Link></li>
+                    )
+                })}
             </ul>
         </div>
     )
 }
 
-// ListOfUsers.propTypes = {
-//     users: PropTypes.array
-//   }; 
-
 export default ListOfUsers;
 
 
-/* {props.users.map((user)=> {
-<div id='user.firstName'>
-{user.firstname}
-<Link to='/detail'> details </Link>
-<button onClick={deleteUser} type='submit'> delete </button>
-</div>
-})} */
+
 
 
