@@ -1,8 +1,8 @@
 const mongoose = require('mongoose')
-const { Auth } = require('./schemas')
+const { Users } = require('./schemas')
 
-const AuthModel = mongoose.model('Auth', Auth, 'auth')
+const UsersModel = mongoose.model('Users', Users)
 
 module.exports = {
-  AuthModel
+  UsersModel
 }

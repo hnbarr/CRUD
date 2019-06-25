@@ -13,5 +13,4 @@ app.listen(port, () => {
 });
 
 
-
 // mongoose.connect("mongodb://localhost/checkpoint2");
