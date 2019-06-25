@@ -23,9 +23,10 @@ router.delete('/:id', (request, response)=> {
 })
 
 // Create a route for getting ONE user by it's id
-router.get('/:id', (request, response)=> {
-    UsersController.getById(request.params.id)
-        .then((user)=> response.json(user))
-})
+
+// router.get('/:id', (request, response)=> {
+//     UsersController.getById(request.params.id)
+//         .then((user)=> response.json(user))
+// })
 
 module.exports = router
