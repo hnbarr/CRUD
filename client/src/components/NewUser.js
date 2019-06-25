@@ -25,7 +25,15 @@ export default class NewUser extends Component {
     
 
     handleClick = (e) => {
-        console.log(e.target.value)
+        // console.log(e.target.value)
+        e.preventDefault();
+        const firstName = this.state.firstName;
+        const lastName = this.state.lastName;
+        const city = this.state.city;
+        const state = this.state.state;
+        const email = this.state.email;
+
+        this.props.createPost({ firstName, lastName, city, state, email })
         
     }
     render() {

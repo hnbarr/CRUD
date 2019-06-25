@@ -7,7 +7,7 @@ import './components.css'
 
 const ListOfUsers = (props) => {
     // this.props.listUsers()
-    console.log(props) //returning an object
+    console.log('ListOfUsers.js: props =', props) //returning an object
     return (
         <div className='card'>                
         <h4>Current Users:</h4>
