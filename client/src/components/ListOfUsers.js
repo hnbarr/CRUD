@@ -21,7 +21,7 @@ const ListOfUsers = (props) => {
 
 // ListOfUsers.propTypes = {
 //     users: PropTypes.array
-//   };
+//   }; 
 
 export default ListOfUsers;
 
