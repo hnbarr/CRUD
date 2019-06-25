@@ -5,7 +5,7 @@ import NewUserContainer from '../containers/NewUserContainer';
 
 const Home = () => {
     return (
-        <div>
+        <div id='homeLayout'>
             <NewUserContainer />
             <ListContainer />
         </div>

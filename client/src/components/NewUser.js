@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './components.css'
 import PropTypes from 'prop-types'
-
+import createUser from '../actions'
 
 
 export default class NewUser extends Component {
@@ -38,7 +38,7 @@ export default class NewUser extends Component {
     }
     render() {
         return (
-            <form className='card' onSubmit={this.handleClick}>
+            <form className='card' id='newForm' onSubmit={this.handleClick}>
               <h3>add a new user!</h3>
                 <label>first name: </label>
                     <input className='field' onChange={this.handleChange} type='text' name='firstName' placeholder='Jane'></input>
