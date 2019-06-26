@@ -13,10 +13,9 @@ const ListOfUsers = (props) => {
                 {props.users.map((user)=> {
                   return (
                     <div className='userDetailCard' key={user.id}>
-                        <li>{user.firstName} {user.lastName} from {user.city}</li> 
-                        <Link to='/:id'> details </Link>
+                      <li>{user.firstName} {user.lastName} from {user.city} </li> 
+                      <Link id='detailLink' to='/:id'> details </Link>
                     </div>
-                    
                     )
                 })}
             </ul>

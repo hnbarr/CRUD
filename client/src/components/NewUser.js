@@ -1,13 +1,10 @@
 import React, { Component } from 'react'
 import './components.css'
-import PropTypes from 'prop-types'
 import createUser from '../actions'
-
 
 export default class NewUser extends Component {
     constructor(props) {
         super(props)
-    
         this.state = {
             firstName: '',
             lastName: '',
@@ -23,19 +20,17 @@ export default class NewUser extends Component {
           });
     }
     
-
     handleClick = (e) => {
-        // console.log(e.target.value)
+        // console.log(e.target.firstName.value) return first name entered
         e.preventDefault();
         const firstName = this.state.firstName;
         const lastName = this.state.lastName;
         const city = this.state.city;
         const state = this.state.state;
         const email = this.state.email;
-
-        this.props.createUser({ firstName, lastName, city, state, email })
-        
+        createUser({ firstName, lastName, city, state, email })   
     }
+
     render() {
         return (
             <form className='card' id='newForm' onSubmit={this.handleClick}>
@@ -55,14 +50,8 @@ export default class NewUser extends Component {
                 <label>email: </label>
                     <input className='field' onChange={this.handleChange} type='text' name='email' placeholder='janedoe@gmail.com'></input> 
                 
-                <button id='registerBtn' type='submit'> submit </button>   
+                <button id='registerBtn' type='submit' onClick={this.handleClick}> submit </button>   
             </form>
         )
     }
 }
-
-
-NewUser.propTypes = {
-    users: PropTypes.array
-  };
-// I think someting is wrong with my prop types
