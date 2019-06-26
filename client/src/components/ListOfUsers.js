@@ -14,7 +14,7 @@ const ListOfUsers = (props) => {
                   return (
                     <div className='userDetailCard' key={user.id}>
                       <li>{user.firstName} {user.lastName} from {user.city} </li> 
-                      <Link id='detailLink' to='/:id'> details </Link>
+                      <Link id='detailLink' to={`/${user.id}`}> details </Link>
                     </div>
                     )
                 })}

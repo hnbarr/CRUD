@@ -56,7 +56,8 @@ li {
      padding: 5px;
      border-radius: 12px;
      margin: 10px;
-     width: 40vw;
+     width: 38vw;
+     box-shadow: 0 8px 6px -6px rgb(188, 188, 188);
  }
 
  #homeLayout {

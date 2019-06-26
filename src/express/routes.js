@@ -3,15 +3,15 @@ const router = express.Router()
 const { listUsers, getUserById, createUser, removeUser} = require('./controllers')
 
 router.get('/users', (req, res) => {
-    res.json(listUsers())
-})
-
-router.get('/users/:id', (req, res) => {
-    res.json(getUserById(req.params.id));
+    res.json(listUsers(req.body))
 })
 
 router.post('/users', (req, res) => {
     res.json(createUser(req.body));
+})
+
+router.get('/users/:id', (req, res) => {
+    res.json(getUserById(req.params.id));
 })
 
 router.delete('/users/:id'), (req, res) => {
