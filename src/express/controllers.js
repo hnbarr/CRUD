@@ -7,6 +7,10 @@ const listUsers = () => {
     return UsersModel.find({})
 }
 
+const getUserById = (user) => {
+    return UsersModel.findOne(user.id)
+}
+
 const createUser = (user) => {
     return UsersModel.create(user)
 }
@@ -25,5 +29,6 @@ export default {
     listUsers,
     createUser,
     removeUser,
+    getUserById
     // updateUser
 }

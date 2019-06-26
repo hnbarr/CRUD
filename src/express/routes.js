@@ -1,32 +1,21 @@
 const express = require('express')
 const router = express.Router()
-const UsersController = require('./controllers')
+const { listUsers, getUserById, createUser, removeUser} = require('./controllers')
 
-// Create a route for getting all users from the db
-router.get('/', (request, response)=> {
-    UsersController.getAll()
-        .then(users => {
-            response.json(users)
-        })
+router.get('/users', (req, res) => {
+    res.json(listUsers())
 })
 
-// Create a route for creating a user
-router.post('/', (request, response)=> {
-    UsersController.createUser(request.body)
-        .then(user => response.json(user))
+router.get('/users/:id', (req, res) => {
+    res.json(getUserById(req.params.id));
 })
 
-// Create a route for deleting ONE user 
-router.delete('/:id', (request, response)=> {
-    UsersController.deleteUser(request.params.id)
-        .then(()=> response.json({}))
+router.post('/users', (req, res) => {
+    res.json(createUser(req.body));
 })
 
-// Create a route for getting ONE user by it's id
+router.delete('/users/:id'), (req, res) => {
+    res.json(removeUser(req.params.id))
+}
 
-// router.get('/:id', (request, response)=> {
-//     UsersController.getById(request.params.id)
-//         .then((user)=> response.json(user))
-// })
-
-module.exports = router
+module.exports = router;
