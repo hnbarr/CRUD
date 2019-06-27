@@ -30,6 +30,14 @@ export default class NewUser extends Component {
         const state = this.state.state;
         const email = this.state.email;
         this.props.createUser({ id, firstName, lastName, city, state, email })   
+        this.setState({
+            id: this.state.id + 1,
+            firstName: '',
+            lastName: '',
+            city: '',
+            state: '',
+            email: '' 
+        })
     }
 
     render() {
