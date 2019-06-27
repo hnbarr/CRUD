@@ -6,6 +6,7 @@ export default class NewUser extends Component {
     constructor(props) {
         super(props)
         this.state = {
+            id: 0,
             firstName: '',
             lastName: '',
             city: '',
@@ -23,12 +24,13 @@ export default class NewUser extends Component {
     handleClick = (e) => {
         // console.log(e.target.firstName.value) return first name entered
         e.preventDefault();
+        const id = this.state.id;
         const firstName = this.state.firstName;
         const lastName = this.state.lastName;
         const city = this.state.city;
         const state = this.state.state;
         const email = this.state.email;
-        this.props.createUser({ firstName, lastName, city, state, email })   
+        this.props.createUser({ id, firstName, lastName, city, state, email })   
     }
 
     render() {

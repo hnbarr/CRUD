@@ -4,6 +4,7 @@ import './components.css'
 // import showUser from '../actions'
 
 import React, { Component } from 'react'
+import { userInfo } from 'os';
 
 export default class UserDetail extends Component {
 
@@ -14,8 +15,10 @@ export default class UserDetail extends Component {
 
     render() {
         return (
-            <div>
+            <div className='card'>
                 <p>show user details here. Solo Dolo User</p>
+                {this.props.user}
+                {/* not working.. need to be able to get data from api pull here. */}
             </div>
         )
     }
