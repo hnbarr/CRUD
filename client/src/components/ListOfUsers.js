@@ -12,7 +12,7 @@ const ListOfUsers = (props) => {
             <ul>
                 {props.users.map((user)=> {
                   return (
-                    <div className='userDetailCard' key={user.lastName}>
+                    <div className='userDetailCard' key={user.id}>
                       <li>{user.firstName} {user.lastName} from {user.city} </li> 
                       <Link id='detailLink' to={`/${user.id}`}> details </Link>
                     </div>
