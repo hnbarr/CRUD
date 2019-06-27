@@ -5,7 +5,7 @@ export default class UserDetail extends Component {
 
     componentDidMount(){
         this.props.showUser(this.props.match.params.id)
-        // console.log('props.users in UserDetail: ', props)
+        console.log('props.users in UserDetail: ', this.props)
     }
 
     render() {

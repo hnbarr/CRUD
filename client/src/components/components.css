@@ -48,6 +48,10 @@ li {
      list-style-type: none;
  }
 
+ a {
+     color: rgb(140, 138, 138);
+ }
+
  .userDetailCard {
      display: flex;
      flex-wrap: wrap;

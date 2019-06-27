@@ -1,7 +1,6 @@
 import React from 'react'
 import './components.css'
 import { Link } from 'react-router-dom'
-// import deleteUser from '../actions/index'
 
 
 const ListOfUsers = (props) => {
@@ -14,7 +13,7 @@ const ListOfUsers = (props) => {
                   return (
                     <div className='userDetailCard' key={user.id}>
                       <li>{user.firstName} {user.lastName} from {user.city} </li> 
-                      <Link id='detailLink' to={`/${user.id}`}> details </Link>
+                      <Link id='detailLink' to={`/users/${user.id}`}> <i className="fas fa-info-circle"></i> </Link>
                     </div>
                     )
                 })}

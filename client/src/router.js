@@ -11,7 +11,7 @@ const Router = () => {
             <Route exact path='/' component={HomeContainer}></Route>
             <Route path='/list' component={ListContainer}></Route>
             <Route path='/new' component={NewUserContainer}></Route>
-            <Route path='/:id' component={DetailContainer}></Route>
+            <Route path='/users/:id' component={DetailContainer}></Route>
         </Switch>
     );
 }

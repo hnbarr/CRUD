@@ -16,8 +16,6 @@ const getUserById = (id) => {
 
 const createUser = (newUser) => {
     // return UsersModel.create(user)
-    users.length === 0 ? newUser.id = 1 : newUser.id = users[users.length -1] + 1;
-    // okay, somethings broken here, the id is constantly 0, for each user I enter.. always
     users.push(newUser);
     return props.users;
 }

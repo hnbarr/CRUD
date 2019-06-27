@@ -24,7 +24,7 @@
   export function showUser(id) {
     return (dispatch) => {
       fetch(`./users/${id}`)
-        .then(res=> console.log(res))
+        .then(res=> console.log('showUser res:' ,res))
     }
     // return {
     //   type: "SHOW_USER",
