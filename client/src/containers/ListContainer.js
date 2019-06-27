@@ -1,6 +1,6 @@
 import ListOfUsers from "../components/ListOfUsers";
 import { connect } from "react-redux";
-import { deleteUser } from '../actions'
+import { listUsers } from '../actions'
 
 
 function mapStateToProps(state) {
@@ -11,7 +11,7 @@ function mapStateToProps(state) {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-      deleteUser: () => dispatch(deleteUser())
+      listUsers: () => dispatch(listUsers())
     }
   }
 

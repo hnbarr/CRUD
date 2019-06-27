@@ -7,7 +7,8 @@ const users = (state = [], action) => {
     case 'CREATE_USER':
       return [...state, action.value]
     case 'DELETE_USER':
-      state.slice(1)
+      state.slice(1);
+    break;
     default:
       return state
   }

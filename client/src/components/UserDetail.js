@@ -1,10 +1,5 @@
-// import React from 'react'
 import './components.css'
-// import deleteUser from '../actions'
-// import showUser from '../actions'
-
 import React, { Component } from 'react'
-import { userInfo } from 'os';
 
 export default class UserDetail extends Component {
 
