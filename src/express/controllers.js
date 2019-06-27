@@ -10,7 +10,7 @@ const listUsers = () => {
 }
 
 const getUserById = (id) => {
-    return UsersModel.findOne({id: id})
+    return UsersModel.findById({_id: id})
     // return users.find(u => u._id == id);
 }
 

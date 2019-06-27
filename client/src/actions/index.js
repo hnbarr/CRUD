@@ -23,11 +23,10 @@
 
   export function showUser(id) {
     return (dispatch) => {
-      fetch(`./users/${id}`)
-        .then(res=> console.log('showUser res:' ,res))
-    }
-    // return {
-    //   type: "SHOW_USER",
-    //   value: id
-    // }
+      fetch(`/users/${id}`)
+        .then(res=> dispatch({
+          type: "SHOW_USER",
+          value: res
+        }))
+      };
   }

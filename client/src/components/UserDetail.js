@@ -12,7 +12,7 @@ export default class UserDetail extends Component {
         return (
             <div className='card'>
                 <p>show user details here. Solo Dolo User</p>
-                {this.props.user}
+                <p>{this.props.currentUser.firstName}</p>
                 {/* not working.. need to be able to get data from api pull here. */}
             </div>
         )
