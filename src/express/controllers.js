@@ -1,6 +1,7 @@
 import { Types } from 'mongoose';
+import { builtinModules } from 'module';
 const ObjectId = Types.ObjectId
-// import { UsersModel } from '../mongo/models';
+import { UsersModel } from '../mongo/models';
 
 
 const listUsers = () => {
@@ -9,8 +10,8 @@ const listUsers = () => {
 }
 
 const getUserById = (id) => {
-    // return UsersModel.findOne(user.id)
-    return users.find(u => u._id == id);
+    return UsersModel.findOne({id: id})
+    // return users.find(u => u._id == id);
 }
 
 const createUser = (newUser) => {
@@ -34,7 +35,7 @@ const updateUser = (id) => {
 }
 
 
-export default {
+module.exports =  {
     listUsers,
     createUser,
     removeUser,

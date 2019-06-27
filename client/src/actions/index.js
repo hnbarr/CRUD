@@ -23,7 +23,7 @@
 
   export function showUser(id) {
     return (dispatch) => {
-      fetch('/users/:id')
+      fetch(`./users/${id}`)
       .then(res=> console.log(res))
     }
     debugger;

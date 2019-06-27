@@ -11,7 +11,11 @@ router.post('/users', (req, res) => {
 })
 
 router.get('/users/:id', (req, res) => {
-    res.json(getUserById(req.params.id));
+    router.get('/users/:id', (req, res) => {
+        getUserById(req.params.id)
+            .then(result => res.json(result))
+            .catch(err => res.sendStatus(500))
+    })
 })
 
 router.delete('/users/:id'), (req, res) => {
