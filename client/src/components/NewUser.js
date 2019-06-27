@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './components.css'
-import createUser from '../actions'
+// import createUser from '../actions'
 
 export default class NewUser extends Component {
     constructor(props) {
