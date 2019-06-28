@@ -11,10 +11,14 @@ export default class UserDetail extends Component {
     render() {
         return (
             <div className='card'>
-                <p>show user details here. Solo Dolo User</p>
-                <p>{this.props.currentUser.firstName}</p>
-                {/* not working.. need to be able to get data from api pull here. */}
+                <ul>
+                  {this.props.match.isExact && <li>{this.props.showUser.firstName}</li>}
+                </ul>
             </div>
         )
     }
 }
+
+// {this.props.users.map((user) => {
+//     user => user.id === this.props.match.params.id && <li key={user.id}> {user.firstName} </li>
+//   })}
