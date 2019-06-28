@@ -14,7 +14,7 @@ const users = (state = [], action) => {
   }
 }
 
-const currentUser = (state={}, action) => {
+const currentUser = (state = {}, action) => {
   switch(action.type){
     case "SHOW_USER":
       return action.value;

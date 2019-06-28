@@ -3,6 +3,8 @@ import { builtinModules } from 'module';
 const ObjectId = Types.ObjectId
 import { UsersModel } from '../mongo/models';
 
+const users = []
+
 
 const listUsers = () => {
     // return UsersModel.find({})
@@ -10,7 +12,8 @@ const listUsers = () => {
 }
 
 const getUserById = (id) => {
-    return UsersModel.findById({_id: id})
+    console.log('ID', id)
+    return UsersModel.find({})
     // return users.find(u => u._id == id);
 }
 

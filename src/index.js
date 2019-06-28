@@ -5,7 +5,7 @@ import router from './express/routes'
 
 mongoose.set("debug", true);
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb+srv://admin:admin@cluster0-fj5rl.mongodb.net/test?retryWrites=true&w=majority');
+mongoose.connect('mongodb+srv://admin:admin@cluster0-iz1th.mongodb.net/test?retryWrites=true&w=majority');
 
 app.use(router)
 const port = process.env.PORT || 3001;

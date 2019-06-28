@@ -11,6 +11,8 @@ router.post('/users', (req, res) => {
 })
 
 router.get('/users/:id', (req, res) => {
+    // const user = users.find( u => u.id === req.params.id)
+    // req.json(user)
         getUserById(req.params.id)
             .then(result => {
                 console.log('RESULT', result)
@@ -27,3 +29,5 @@ router.delete('/users/:id'), (req, res) => {
 }
 
 module.exports = router;
+
+// res.json(users[req.params.index])
