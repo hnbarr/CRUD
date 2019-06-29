@@ -17,6 +17,7 @@ const users = (state = [], action) => {
 const currentUser = (state = {}, action) => {
   switch(action.type){
     case "SHOW_USER":
+    // console.log('show user reducer: ', action.value)
       return action.value;
     default:
       return state

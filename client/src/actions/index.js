@@ -1,6 +1,5 @@
 
   export function listUsers(users) {
-    console.log("list users", users);
     return {
       type: "LIST_USERS",
       value: users
@@ -31,4 +30,13 @@
       };
   }
 
-  
+
+  // listusers function
+  // return (dispatch) => {
+  //   fetch(`/users`)
+  //     .then(res=> dispatch({
+  //       type: "LIST_USERS",
+  //       value: res
+  //     }))
+  //     console.log("list users", users); //undefined
+  //   };
