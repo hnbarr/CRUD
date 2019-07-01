@@ -1,8 +1,12 @@
 
-  export function listUsers(users) {
-    return {
-      type: "LIST_USERS",
-      value: users
+  export function listUsers() {
+    return (dispatch) => {
+      fetch("/users")
+      .then(res => res.json())
+      .then(users => dispatch({
+        type: "LIST_USERS",
+        value: users
+      }));
     };
   }
   
@@ -23,9 +27,10 @@
   export function showUser(id) {
     return (dispatch) => {
       fetch(`/users/${id}`)
-        .then(res=> dispatch({
+        .then(res => res.json())
+        .then(user=> dispatch({
           type: "SHOW_USER",
-          value: res
+          value: user
         }))
       };
   }

@@ -7,14 +7,11 @@ const users = []
 
 
 const listUsers = () => {
-    // return UsersModel.find({})
-    return users
+    return UsersModel.find({});
 }
 
 const getUserById = (id) => {
-    console.log('ID', id)
-    return UsersModel.find({})
-    // return users.find(u => u._id == id);
+    return UsersModel.findById({ _id: id });
 }
 
 const createUser = (newUser) => {

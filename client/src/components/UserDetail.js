@@ -11,6 +11,7 @@ export default class UserDetail extends Component {
     }
 
     render() {
+        console.log('CURRENT USER', this.props.currentUser) // this exists now
         return (
             <div className='card'>
                 <p>solo user card here</p>
