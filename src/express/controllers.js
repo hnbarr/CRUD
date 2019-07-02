@@ -14,10 +14,11 @@ const getUserById = (id) => {
     return UsersModel.findById({ _id: id });
 }
 
-const createUser = (newUser) => {
-    // return UsersModel.create(user)
-    users.push(newUser);
-    return props.users;
+const createUser = (user) => {
+    console.log('user', user)
+    return UsersModel.create(user)
+    // users.push(newUser);
+    // return props.users;
 }
 
 const removeUser = (id) => {

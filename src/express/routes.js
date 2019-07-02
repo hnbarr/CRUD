@@ -12,7 +12,11 @@ router.get('/users', (req, res) => {
 })
 
 router.post('/users', (req, res) => {
-    res.json(createUser(req.body));
+    console.log('REQ', req.body)
+    createUser(req.body)
+        .then(result => {
+            res.json(result)
+        });
 })
 
 router.get('/users/:id', (req, res) => {

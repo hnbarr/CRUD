@@ -11,10 +11,21 @@
   }
   
   export function createUser(user) {
-    return {
-      type: "CREATE_USER",
-      value: user
-    };
+    console.log('USER', user)
+    return (dispatch) => {
+      fetch(`/users`, {
+        method: 'POST',
+        body: JSON.stringify(user),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+        .then(res => res.json())
+        .then(user=> dispatch({
+          type: "CREATE_USER",
+          value: user
+        }))
+      };
   }
   
   export function deleteUser(id) {
