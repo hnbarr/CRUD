@@ -3,7 +3,12 @@ const router = express.Router()
 const { listUsers, getUserById, createUser, removeUser} = require('./controllers')
 
 router.get('/users', (req, res) => {
-    res.json(listUsers(req.body))
+    listUsers()
+        .then(response => res.json(response))
+        .catch(err => {
+            console.log('Error in /users route:', err)
+            res.sendStatus(500)
+        })
 })
 
 router.post('/users', (req, res) => {
